@@ -1,0 +1,14 @@
+@import "../../../assets/shared/variables";
+
+.user-logo-wrapper {
+    .user-logo {
+        height: $control-max-height;
+        border-radius: 50%;
+        background-color: $snow-white-color;
+        padding: 5px;
+
+        @media #{$mobile} {
+            height: 25px;
+        }
+    }
+}

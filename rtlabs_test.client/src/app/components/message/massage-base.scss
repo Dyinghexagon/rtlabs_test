@@ -1,0 +1,14 @@
+@import "../../../assets/shared/variables";
+
+.message-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    .message-value {
+        max-height: $control-max-height;
+        margin: 0;
+        padding: 10px;
+        border-radius: $control-border-radius;
+    }
+}

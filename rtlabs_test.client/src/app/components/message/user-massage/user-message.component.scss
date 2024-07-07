@@ -1,0 +1,10 @@
+@import "../../../../assets/shared/variables";
+
+.message-wrapper {
+    justify-content: flex-end;
+
+    .message-value {
+        background-color: $black-color;
+        color: $white-color;
+    }
+}

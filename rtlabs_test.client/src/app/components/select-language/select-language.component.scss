@@ -1,0 +1,14 @@
+@import "../../../assets/shared/variables";
+
+.select-language-wrapper {
+    display: flex;
+    gap: $gap;
+
+    .icon {
+        font-size: 32px;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

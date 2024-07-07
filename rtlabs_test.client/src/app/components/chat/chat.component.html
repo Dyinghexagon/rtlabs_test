@@ -1,0 +1,27 @@
+<div class="chat-wrapper">
+    <div class="chat-header">
+        <div class="chat-header-logo">
+            <app-user-logo></app-user-logo>
+            <span>
+                {{ "CHAT.TITLE" | translate }}
+            </span>
+        </div>
+        <app-select-language></app-select-language>
+    </div>
+    <div class="message-area" data-test-id="message-area">
+        <ng-container *ngFor="let message of messages">
+            <app-chat-message *ngIf="message.type === 'BotMessage'" [massageValue]="message.text" data-test-id="bot-message"></app-chat-message>
+            <app-user-message *ngIf="message.type === 'UserMessage'" [massageValue]="message.text" data-test-id="user-message"></app-user-message>
+          </ng-container>
+    </div>
+    <div class="chat-footer">
+        <textarea #chatInput
+            type="text" 
+            class="chat-input"
+            data-test-id="chat-input"
+            [placeholder]="'CHAT.PLACEHOLDER' | translate"
+            (keyup.enter)="send()"
+        ></textarea>
+        <button class="send-button" data-test-id="send-button" (click)="send()"><span class="icon icon-arrow"></span></button>
+    </div>
+</div>
