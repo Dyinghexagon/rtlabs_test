@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { environment } from "../../../environments/environment";
 @Component({
     selector: "app-user-logo",
     templateUrl: "./user-logo.component.html",
@@ -9,6 +10,7 @@ export class UserLogoComponent {
     @Input() public userLogoSrc: string | null = null;
 
     public get src(): string {
-        return !this.userLogoSrc ? "../../assets/images/defaults user logo.svg" : this.userLogoSrc; 
+        const defaultUserLogo = environment.production ? `${environment.baseUrl}/assets/user_logo.svg` : "../../assets/images/user_logo.svg`"
+        return !this.userLogoSrc ? defaultUserLogo : this.userLogoSrc; 
     }
 }
