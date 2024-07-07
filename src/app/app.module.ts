@@ -50,5 +50,5 @@ import { routes } from "./app.routes";
 export class AppModule { }
 
 export function createTranslateLoader(http: HttpClient): TranslateHttpLoader {
-    return new TranslateHttpLoader(http, "../assets/i18n/", ".json");
+    return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
 }
