@@ -11,6 +11,8 @@ import { UserMessageComponent } from "./components/message/user-massage/user-mes
 import { ChatMessageComponent } from "./components/message/chat-massage/chat-massage.component";
 import { BotRequestService } from "./services/bot-request.service";
 import { SelectLanguage } from "./components/select-language/select-language.component";
+import { RouterModule } from "@angular/router";
+import { routes } from "./app.routes";
 
 @NgModule({
     declarations: [
@@ -33,6 +35,10 @@ import { SelectLanguage } from "./components/select-language/select-language.com
                 deps: [HttpClient]
             }
         }),
+        RouterModule.forRoot(routes)
+    ],
+    exports: [
+        RouterModule
     ],
     providers: [
         TranslateService,
