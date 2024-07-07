@@ -9,7 +9,9 @@ export class BotRequestService {
     constructor(private http: HttpClient) { }
 
     public sendToChatBot(command: string): Observable<string> {
-        return this.http.get<any>(`${environment.baseUrl}/assets/MOK.json`).pipe(
+        const mockUrl = environment.production ? `${environment.baseUrl}/assets/MOK.json` : "../../assets/MOCK.json";
+
+        return this.http.get<any>(mockUrl).pipe(
             map((chatBotResponse: IChatBotResponse) => {
                 let response = chatBotResponse.commands.find(x => x.command === command)?.response;
                 if (!response) {

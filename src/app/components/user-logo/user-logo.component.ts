@@ -10,7 +10,7 @@ export class UserLogoComponent {
     @Input() public userLogoSrc: string | null = null;
 
     public get src(): string {
-        const defaultUserLogo = environment.production ? `${environment.baseUrl}/assets/images/user_logo.svg` : "../../assets/images/user_logo.svg`"
+        const defaultUserLogo = environment.production ? `${environment.baseUrl}/assets/images/user_logo.svg` : "../../assets/images/user_logo.svg"
         return !this.userLogoSrc ? defaultUserLogo : this.userLogoSrc; 
     }
 }
