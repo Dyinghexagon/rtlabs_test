@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 import { BotRequestService } from "../../services/bot-request.service";
 import { TranslateService } from "@ngx-translate/core";
-import { lastValueFrom, Subject, switchMap, takeUntil } from "rxjs";
+import { lastValueFrom, Subject } from "rxjs";
 
 @Component({
     selector: "app-chat",
