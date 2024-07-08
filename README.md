@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Development process
+
+1. The main entities of the project are defined: chat, chat bot and user message, MOCK server data
+2. Step-by-step application development
+3. Testing the operation of the application
+4. Project deployment in GitHub Pages
